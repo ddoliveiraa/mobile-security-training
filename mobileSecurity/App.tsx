@@ -137,10 +137,15 @@ function DetailsScreen({ route, navigation }) {
 const Stack = createNativeStackNavigator();
 
 function App() {
+  React.useEffect(() => {
+    console.log('App.tsx: useEffect()');
+    
+  }, []);
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
