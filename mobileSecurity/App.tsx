@@ -17,7 +17,7 @@ let asTouchId = false;
 let asFingerprint = true;
 
 /* Signup google */
-import { GoogleSignin, statusCodes } from '@react-native-google-signin/google-signin';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
 
 
 const validatedBiometrics = async (navigation) => {
@@ -35,7 +35,7 @@ const validatedBiometrics = async (navigation) => {
 };
 
 const formatUserInformation = (userInfo) => {
-  const { id, email, name, photo } = userInfo.user;
+  const { id, email, name } = userInfo.user;
   return `ID: ${id}, Email: ${email}, Name: ${name}`;
 };
 
